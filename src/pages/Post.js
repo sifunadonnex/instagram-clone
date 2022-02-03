@@ -1,9 +1,10 @@
 import { CollectionsOutlined } from '@mui/icons-material';
 import React, { useRef,useState } from 'react'
+import {useSelector} from 'react-redux';
 import { useDispatch } from 'react-redux';
 import styled from'styled-components'
 import { getDownloadURL,ref,uploadString } from 'firebase/storage';
-import { addDoc,collection,serverTimestamp } from 'firebase/firestore';
+import { doc,updateDoc,addDoc,collection,serverTimestamp } from 'firebase/firestore';
 import db,{storage} from '../firebase/firebase'
 import {selectEmail,selectName,selectPhoto} from '../features/User/userSlice'
 function Post() {

@@ -31,7 +31,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />}/>
             </Routes>
-            <Post />
+            <Routes>
+            <Route path="/Post" element={<Post />}/>
+            </Routes>
         </Router>
       </Container>
     );
